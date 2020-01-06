@@ -1,4 +1,6 @@
-﻿namespace FormNewton
+﻿using System;
+
+namespace FormNewton
 {
     partial class Form1
     {
@@ -99,6 +101,11 @@
             this.ResumeLayout(false);
             this.PerformLayout();
 
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+            
         }
 
         #endregion
