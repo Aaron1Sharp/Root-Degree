@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HomeWork No.2</name>
+    </assembly>
+    <members>
+        <member name="M:homework_No._2.Calculus.Main(System.String[])">
+            <summary>
+            5 = n степень корня, 9 = A число внутри корня
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:homework_No._2.Calculus.SqrtN(System.Double,System.Double,System.Double)">
+            <summary>
+                SqrtN = Квадратный корень 
+                eps = 0.0001 заданная точность
+                Math.Abs = Возвращает абсолютное значение указанного числа.
+                Math.Pow = Возвращает указанное число, возведенное в указанную степень.
+            </summary>
+            <param name="n"></param>
+            <param name="A"></param>
+            <param name="eps"></param>
+            <returns>
+                SqrtN = 1,55184557460721
+            </returns>
+        </member>
+    </members>
+</doc>
