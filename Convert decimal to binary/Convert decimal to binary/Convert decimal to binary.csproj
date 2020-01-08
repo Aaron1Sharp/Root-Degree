@@ -1,9 +1,13 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <RootNamespace>Convert_decimal_to_binary</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile>C:\Users\Aaron\source\repos\Aaron1Sharp\Root-Degree\Convert decimal to binary\Convert decimal to binary\Convert decimal to binary.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>

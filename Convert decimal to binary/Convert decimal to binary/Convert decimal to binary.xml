@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Convert decimal to binary</name>
+    </assembly>
+    <members>
+        <member name="T:Convert_decimal_to_binary.BinaryMethod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Convert_decimal_to_binary.BinaryMethod.SystemMethod(System.Int32)">
+            <summary>
+            производим цикл в котором число при делении проверяем его  его на остаток на 2
+            </summary>
+            <param name="numberdecimal"></param>
+            <returns>вывод цикла но в обратной последовательности</returns>
+        </member>
+        <member name="M:Convert_decimal_to_binary.BinaryMethod.ObratNumberDecimal(System.Collections.Generic.List{System.Int32})">
+            <summary>
+            переворачиваем цикл через лист
+            </summary>
+            <param name="finalresult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Convert_decimal_to_binary.Program.Main(System.String[])">
+            <summary>
+            Вводим число и на выводе получаем его в двоичной системеа
+            </summary>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>

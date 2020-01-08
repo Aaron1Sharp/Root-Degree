@@ -1,33 +1,26 @@
 ﻿using System;
+using System.Linq;
 
 namespace Convert_decimal_to_binary
 {
     class Program
     {
+        /// <summary>
+        /// Вводим число и на выводе получаем его в двоичной системеа
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
-            Console.WriteLine(SystemMethod(4));
+            int numberdecimal;
+            Console.WriteLine("ввод числа");
+            numberdecimal = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine(Convert.ToString(BinaryMethod.SystemMethod(numberdecimal)) + " = в двоичной системе");
             Console.ReadKey();
         }
-
-        static public int SystemMethod(int numberdecimal)
-        {
-            int count = 1;
-            Console.WriteLine(numberdecimal);
-            for (; numberdecimal > 0; numberdecimal /= 2, ++count)
-            {
-                Console.WriteLine();
-                if ((numberdecimal % 2) != 0)
-                {
-                    Console.Write(" 1** =");
-                }
-                else
-                {
-                    Console.Write(" 0** =");
-                }
-                Console.Write(" цикл-- " + count + " --= ");
-            }
-            return numberdecimal;
-        }
     }
+
+
+    
+    
+       
 }
