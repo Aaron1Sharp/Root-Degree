@@ -20,20 +20,9 @@ namespace FormBinaryMethod
             {
                 count++;
                 int temp1 = numberdecimal % 2;
-
-                if ((numberdecimal % 2) != 0) // = false
-                {
-                    Console.Write("1");
-                }
-                else
-                {
-                    Console.Write("0");
-                }
                 numberdecimal /= 2;
                 s.Add(temp1);
-            }
-            Console.WriteLine(" > количество циклов = " + count);
-            Console.WriteLine("производим обратную запись. . .");
+            }          
             return ObratNumberDecimal(s);
         }
         /// <summary>
@@ -48,7 +37,6 @@ namespace FormBinaryMethod
             {
                 s[finalresult.Count - 1 - i] = finalresult[i];
             }
-
             return Convert.ToInt32(string.Join("", s));
         }
     }
