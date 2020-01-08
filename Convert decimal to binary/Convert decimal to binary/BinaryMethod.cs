@@ -17,23 +17,22 @@ namespace Convert_decimal_to_binary
         { 
             int count = 0;
             List<int> s = new List<int>();
-            while (numberdecimal > 0)
-            {
-                count++;
-                int temp1 = numberdecimal % 2;
+                    while (numberdecimal > 0)
+                    {
+                        count++;
+                        int temp1 = numberdecimal % 2;
                 
-                if ((numberdecimal % 2) != 0)
-                {
-                    Console.Write("1");
-                }
-                else
-                {
-                    Console.Write("0");
-                }
-                numberdecimal /= 2;
-               
-                s.Add(temp1);
-            }
+                        if ((numberdecimal % 2) != 0) // = false
+                        {
+                            Console.Write("1");
+                        }
+                        else
+                        {
+                            Console.Write("0");
+                        }
+                        numberdecimal /= 2;
+                        s.Add(temp1);
+                    }
             Console.WriteLine(" > количество циклов = " + count);
             Console.WriteLine("производим обратную запись. . .");
             return ObratNumberDecimal(s);
@@ -45,13 +44,14 @@ namespace Convert_decimal_to_binary
         /// <returns></returns>
         static int ObratNumberDecimal(List<int> finalresult)
         {
-            int[] s = new int[finalresult.Count];
+            int[]s = new int[finalresult.Count];
             for (int i = finalresult.Count - 1; i >= 0; i--)
             {
                 s[finalresult.Count - 1 - i] = finalresult[i];
             }
            
-            return Convert.ToInt32(string.Join<int>("", s));
+            return Convert.ToInt32(string.Join("", s));
         }
     }
+    
 }
