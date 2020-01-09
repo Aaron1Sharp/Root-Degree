@@ -16,7 +16,7 @@ namespace Convert_decimal_to_binary
         public static int SystemMethod(int numberdecimal)
         { 
             int count = 0;
-            List<int> s = new List<int>();
+            List<int> arraybinary = new List<int>();
                     while (numberdecimal > 0)
                     {
                         count++;
@@ -31,11 +31,11 @@ namespace Convert_decimal_to_binary
                             Console.Write("0");
                         }
                         numberdecimal /= 2;
-                        s.Add(temp1);
+                        arraybinary.Add(temp1);
                     }
             Console.WriteLine(" > количество циклов = " + count);
             Console.WriteLine("производим обратную запись. . .");
-            return ObratNumberDecimal(s);
+            return ObratNumberDecimal(arraybinary);
         }
         /// <summary>
         /// переворачиваем цикл через лист
@@ -44,13 +44,13 @@ namespace Convert_decimal_to_binary
         /// <returns></returns>
         static int ObratNumberDecimal(List<int> finalresult)
         {
-            int[]s = new int[finalresult.Count];
+            int[]arraybinary = new int[finalresult.Count];
             for (int i = finalresult.Count - 1; i >= 0; i--)
             {
-                s[finalresult.Count - 1 - i] = finalresult[i];
+                arraybinary[finalresult.Count - 1 - i] = finalresult[i];
             }
            
-            return Convert.ToInt32(string.Join("", s));
+            return Convert.ToInt32(string.Join("", arraybinary));
         }
     }
     
