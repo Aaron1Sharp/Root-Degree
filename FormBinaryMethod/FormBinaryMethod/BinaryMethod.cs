@@ -10,34 +10,34 @@ namespace FormBinaryMethod
         /// <summary>
         /// производим цикл в котором число при делении проверяем его  его на остаток на 2
         /// </summary>
-        /// <param name="numberdecimal"></param>
+        /// <param name="number_decimal"></param>
         /// <returns>вывод цикла но в обратной последовательности</returns>
-        public static int SystemMethod(int numberdecimal)
+        public static int SystemMethod(int number_decimal)
         {
             int count = 0;
-            List<int> s = new List<int>();
-            while (numberdecimal > 0)
+            List<int> array_binary = new List<int>();
+            while (number_decimal > 0)
             {
                 count++;
-                int temp1 = numberdecimal % 2;
-                numberdecimal /= 2;
-                s.Add(temp1);
+                int temp1 = number_decimal % 2;
+                number_decimal /= 2;
+                array_binary.Add(temp1);
             }          
-            return ObratNumberDecimal(s);
+            return BackNumberDecimal(array_binary);
         }
         /// <summary>
         /// переворачиваем цикл через лист
         /// </summary>
-        /// <param name="finalresult"></param>
+        /// <param name="final_result"></param>
         /// <returns></returns>
-        static int ObratNumberDecimal(List<int> finalresult)
+        static int BackNumberDecimal(List<int> final_result)
         {
-            int[] s = new int[finalresult.Count];
-            for (int i = finalresult.Count - 1; i >= 0; i--)
+            int[] array_binary = new int[final_result.Count];
+            for (int i = final_result.Count - 1; i >= 0; i--)
             {
-                s[finalresult.Count - 1 - i] = finalresult[i];
+                array_binary[final_result.Count - 1 - i] = final_result[i];
             }
-            return Convert.ToInt32(string.Join("", s));
+            return Convert.ToInt32(string.Join("", array_binary));
         }
     }
 }

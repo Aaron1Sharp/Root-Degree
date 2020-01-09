@@ -49,9 +49,7 @@ namespace Convert_decimal_to_binary
             {
                 arraybinary[finalresult.Count - 1 - i] = finalresult[i];
             }
-           
             return Convert.ToInt32(string.Join("", arraybinary));
         }
-    }
-    
+    }  
 }

@@ -22,17 +22,14 @@ namespace FormBinaryMethod
         private void Button1_Click(object sender, EventArgs e)
         {
             try
-            {
-                if (string.IsNullOrWhiteSpace(textBox1.Text)) { }
+            { 
                 label1.Text = Convert.ToString("= "+BinaryMethod.SystemMethod(Convert.ToInt32(textBox1.Text))+"^2");
             }
             catch
             {
-                MessageBox.Show("строка пустая или слишком большое число");
-            }
-            
+                MessageBox.Show("строка пустая, слишком большое число или число отрицательное");
+            }   
         }
-
         private void Label1_Click(object sender, EventArgs e)
         {
 
