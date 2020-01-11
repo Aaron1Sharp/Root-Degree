@@ -1,9 +1,14 @@
-﻿namespace FormAlgorithmEuclidean
+﻿using System;
+using System.Diagnostics;
+
+namespace FormAlgorithmEuclidean
 {
     public class AlgorithmEuclidean
     {
         public static int EuclideanMethod(int firstnumber, int secondnumber)
         {
+            
+
             if (firstnumber == 0)
             {
                 return secondnumber;
@@ -45,7 +50,8 @@
             while (secondnumber != 0);
             {
                 return firstnumber << NOD;
-            }     
+            }
+          
         }
     }   
 }
