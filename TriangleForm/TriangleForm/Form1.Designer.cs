@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.InputA = new System.Windows.Forms.TextBox();
+            this.InputB = new System.Windows.Forms.TextBox();
+            this.InputC = new System.Windows.Forms.TextBox();
+            this.OutputP = new System.Windows.Forms.Label();
+            this.OutputS = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,45 +51,45 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // textBox1
+            // InputA
             // 
-            this.textBox1.Location = new System.Drawing.Point(127, 11);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 1;
+            this.InputA.Location = new System.Drawing.Point(127, 11);
+            this.InputA.Name = "InputA";
+            this.InputA.Size = new System.Drawing.Size(100, 20);
+            this.InputA.TabIndex = 1;
             // 
-            // textBox2
+            // InputB
             // 
-            this.textBox2.Location = new System.Drawing.Point(127, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.InputB.Location = new System.Drawing.Point(127, 37);
+            this.InputB.Name = "InputB";
+            this.InputB.Size = new System.Drawing.Size(100, 20);
+            this.InputB.TabIndex = 2;
             // 
-            // textBox3
+            // InputC
             // 
-            this.textBox3.Location = new System.Drawing.Point(127, 63);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 3;
+            this.InputC.Location = new System.Drawing.Point(127, 63);
+            this.InputC.Name = "InputC";
+            this.InputC.Size = new System.Drawing.Size(100, 20);
+            this.InputC.TabIndex = 3;
             // 
-            // label1
+            // OutputP
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label1.Location = new System.Drawing.Point(351, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 25);
-            this.label1.TabIndex = 4;
-            this.label1.Click += new System.EventHandler(this.Label1_Click);
+            this.OutputP.AutoSize = true;
+            this.OutputP.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.OutputP.Location = new System.Drawing.Point(351, 57);
+            this.OutputP.Name = "OutputP";
+            this.OutputP.Size = new System.Drawing.Size(0, 25);
+            this.OutputP.TabIndex = 4;
+            this.OutputP.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // label2
+            // OutputS
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
-            this.label2.Location = new System.Drawing.Point(351, 18);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 25);
-            this.label2.TabIndex = 5;
+            this.OutputS.AutoSize = true;
+            this.OutputS.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.25F);
+            this.OutputS.Location = new System.Drawing.Point(351, 18);
+            this.OutputS.Name = "OutputS";
+            this.OutputS.Size = new System.Drawing.Size(0, 25);
+            this.OutputS.TabIndex = 5;
             // 
             // label3
             // 
@@ -152,16 +152,17 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.OutputS);
+            this.Controls.Add(this.OutputP);
+            this.Controls.Add(this.InputC);
+            this.Controls.Add(this.InputB);
+            this.Controls.Add(this.InputA);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Площадь треугольника";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -170,11 +171,11 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox InputA;
+        private System.Windows.Forms.TextBox InputB;
+        private System.Windows.Forms.TextBox InputC;
+        private System.Windows.Forms.Label OutputP;
+        private System.Windows.Forms.Label OutputS;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;

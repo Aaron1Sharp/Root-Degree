@@ -12,31 +12,35 @@ namespace TriangleForm
 {
     public partial class Form1 : Form
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
-
+        public Form1() => InitializeComponent();
         private void Button1_Click(object sender, EventArgs e)
         {
-            double A, B, C;
-            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
+            if (CheckInputValues(InputA.Text)
+                || CheckInputValues(InputB.Text)
+                || CheckInputValues(InputC.Text))
             {
                 MessageBox.Show("нет данных");
                 return;
             }
-            A = double.Parse(textBox1.Text);
-            B = double.Parse(textBox2.Text);
-            C = double.Parse(textBox3.Text); 
-            OutPut(Triangle.P_Triangle);
-            OutPut(Triangle.S_Triangle);
+            OutPut();
         }
-        private void OutPut(Func<double, double, double, double> triangle)
+        private void OutPut()
         {
-            label2.Text = Triangle.P_Triangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text), double.Parse(textBox3.Text)).ToString();
-            label1.Text = Triangle.S_Triangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text), double.Parse(textBox3.Text)).ToString();
-        }   
+            OutputS.Text = Triangle.FindP(InputVariable(InputA.Text),
+                                          InputVariable(InputB.Text),
+                                          InputVariable(InputC.Text)).ToString();
+
+            OutputP.Text = Triangle.FindS(InputVariable(InputA.Text),
+                                          InputVariable(InputB.Text),
+                                          double.Parse(InputC.Text)).ToString();
+        }
+        private double InputVariable(string value) => double.Parse(value);
+        private bool CheckInputValues(string value)
+        {
+            return string.IsNullOrEmpty(value) || Convert.ToDouble(value) < 0;
+        }
         private void Label1_Click(object sender, EventArgs e) { }
         private void Label5_Click(object sender, EventArgs e) { }
+        private void Form1_Load(object sender, EventArgs e) { }
     }
 }
