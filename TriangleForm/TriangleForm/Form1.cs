@@ -35,10 +35,7 @@ namespace TriangleForm
                                           double.Parse(InputC.Text)).ToString();
         }
         private double InputVariable(string value) => double.Parse(value);
-        private bool CheckInputValues(string value)
-        {
-            return string.IsNullOrEmpty(value) || Convert.ToDouble(value) < 0;
-        }
+        private bool CheckInputValues(string value) => string.IsNullOrEmpty(value) || Convert.ToDouble(value) < 0;
         private void Label1_Click(object sender, EventArgs e) { }
         private void Label5_Click(object sender, EventArgs e) { }
         private void Form1_Load(object sender, EventArgs e) { }
