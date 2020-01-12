@@ -19,30 +19,24 @@ namespace TriangleForm
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            try
+            double A, B, C;
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrWhiteSpace(textBox2.Text) || string.IsNullOrWhiteSpace(textBox3.Text))
             {
-                double A, B, C, p, S;
-                A = double.Parse(textBox1.Text);
-                B = double.Parse(textBox2.Text);
-                C = double.Parse(textBox3.Text);
-                p = (A + B + C) / 2;
-                S = Math.Sqrt(p * (p - A) * (p - B) * (p - C));
-                p = A + B + C;
-                label1.Text = S.ToString();
-                label2.Text = p.ToString();
+                MessageBox.Show("нет данных");
+                return;
             }
-            catch
-            {
-                MessageBox.Show("Укажите все стороны треугольника");
-            }
-
+            A = double.Parse(textBox1.Text);
+            B = double.Parse(textBox2.Text);
+            C = double.Parse(textBox3.Text); 
+            OutPut(Triangle.P_Triangle);
+            OutPut(Triangle.S_Triangle);
         }
-
-        private void Label1_Click(object sender, EventArgs e)  { }
-
-        private void Label5_Click(object sender, EventArgs e)
+        private void OutPut(Func<double, double, double, double> triangle)
         {
-
-        }
+            label2.Text = Triangle.P_Triangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text), double.Parse(textBox3.Text)).ToString();
+            label1.Text = Triangle.S_Triangle(double.Parse(textBox1.Text), double.Parse(textBox2.Text), double.Parse(textBox3.Text)).ToString();
+        }   
+        private void Label1_Click(object sender, EventArgs e) { }
+        private void Label5_Click(object sender, EventArgs e) { }
     }
 }
