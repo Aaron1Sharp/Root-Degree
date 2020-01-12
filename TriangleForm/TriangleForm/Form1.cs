@@ -26,8 +26,8 @@ namespace TriangleForm
                 B = double.Parse(textBox2.Text);
                 C = double.Parse(textBox3.Text);
                 p = (A + B + C) / 2;
-
                 S = Math.Sqrt(p * (p - A) * (p - B) * (p - C));
+                p = A + B + C;
                 label1.Text = S.ToString();
                 label2.Text = p.ToString();
             }
