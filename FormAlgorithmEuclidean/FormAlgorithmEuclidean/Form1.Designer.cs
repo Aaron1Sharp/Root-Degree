@@ -29,12 +29,11 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.output = new System.Windows.Forms.Label();
+            this.firstnumber = new System.Windows.Forms.TextBox();
+            this.secondnumber = new System.Windows.Forms.TextBox();
+            this.thirdnumber = new System.Windows.Forms.TextBox();
+            this.fourthnumber = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button1
@@ -48,77 +47,68 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // label1
+            // output
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.label1.Location = new System.Drawing.Point(256, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 39);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "= ";
+            this.output.AutoSize = true;
+            this.output.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
+            this.output.Location = new System.Drawing.Point(256, 64);
+            this.output.Name = "output";
+            this.output.Size = new System.Drawing.Size(46, 39);
+            this.output.TabIndex = 1;
+            this.output.Text = "= ";
             // 
-            // textBox1
+            // firstnumber
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(12, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 46);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
+            this.firstnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
+            this.firstnumber.ForeColor = System.Drawing.Color.Black;
+            this.firstnumber.Location = new System.Drawing.Point(12, 5);
+            this.firstnumber.Name = "firstnumber";
+            this.firstnumber.Size = new System.Drawing.Size(229, 46);
+            this.firstnumber.TabIndex = 2;
+            this.firstnumber.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
-            // textBox2
+            // secondnumber
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.textBox2.ForeColor = System.Drawing.Color.Black;
-            this.textBox2.Location = new System.Drawing.Point(12, 57);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(229, 46);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
+            this.secondnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
+            this.secondnumber.ForeColor = System.Drawing.Color.Black;
+            this.secondnumber.Location = new System.Drawing.Point(12, 57);
+            this.secondnumber.Name = "secondnumber";
+            this.secondnumber.Size = new System.Drawing.Size(229, 46);
+            this.secondnumber.TabIndex = 3;
+            this.secondnumber.TextChanged += new System.EventHandler(this.TextBox2_TextChanged);
             // 
-            // textBox3
+            // thirdnumber
             // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(12, 109);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(229, 46);
-            this.textBox3.TabIndex = 4;
+            this.thirdnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
+            this.thirdnumber.ForeColor = System.Drawing.Color.Black;
+            this.thirdnumber.Location = new System.Drawing.Point(12, 109);
+            this.thirdnumber.Name = "thirdnumber";
+            this.thirdnumber.Size = new System.Drawing.Size(229, 46);
+            this.thirdnumber.TabIndex = 4;
             // 
-            // textBox4
+            // fourthnumber
             // 
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(12, 161);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(229, 46);
-            this.textBox4.TabIndex = 5;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
-            this.label2.Location = new System.Drawing.Point(23, 225);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 39);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "label2";
+            this.fourthnumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 25.25F);
+            this.fourthnumber.ForeColor = System.Drawing.Color.Black;
+            this.fourthnumber.Location = new System.Drawing.Point(12, 161);
+            this.fourthnumber.Name = "fourthnumber";
+            this.fourthnumber.Size = new System.Drawing.Size(229, 46);
+            this.fourthnumber.TabIndex = 5;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(627, 283);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(423, 221);
+            this.Controls.Add(this.fourthnumber);
+            this.Controls.Add(this.thirdnumber);
+            this.Controls.Add(this.secondnumber);
+            this.Controls.Add(this.firstnumber);
+            this.Controls.Add(this.output);
             this.Controls.Add(this.button1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -128,12 +118,11 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label output;
+        private System.Windows.Forms.TextBox firstnumber;
+        private System.Windows.Forms.TextBox secondnumber;
+        private System.Windows.Forms.TextBox thirdnumber;
+        private System.Windows.Forms.TextBox fourthnumber;
     }
 }
 

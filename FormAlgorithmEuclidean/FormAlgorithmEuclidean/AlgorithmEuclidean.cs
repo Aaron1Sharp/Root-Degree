@@ -7,17 +7,11 @@ namespace FormAlgorithmEuclidean
     {
         public static int EuclideanMethod(int firstnumber, int secondnumber)
         {
-            
-
             if (firstnumber == 0)
-            {
                 return secondnumber;
-            }
 
             if (secondnumber == 0)
-            {
                 return firstnumber;
-            }
 
             int NOD;
 
@@ -35,23 +29,21 @@ namespace FormAlgorithmEuclidean
             do
             {
                 while ((secondnumber & 1) == 0)
-                {
                     secondnumber >>= 1;
-                }
                 if (firstnumber > secondnumber)
                 {
                     int temp = firstnumber;
                     firstnumber = secondnumber;
                     secondnumber = temp;
                 }
-                secondnumber = (secondnumber - firstnumber);
+                secondnumber -= firstnumber;
                     
             }
+
             while (secondnumber != 0);
             {
                 return firstnumber << NOD;
             }
-          
         }
     }   
 }
